@@ -9,16 +9,16 @@ choices_type = ['PT_SINGLE_SELECT','PT_MULTI_SELECT','PT_RADIO','PT_CHECKBOX']
 def reactive_choice(parser, xml_parent, data):
 
     """
-      - reactive_choice:
-          name: SNAPSHOT_NAMES
-          description: "Return list of snapshot names."
-          projectName: Test_Job
-          referencedParameters: ENV_NAME
-          script: |
-            if (ENV_NAME == 'production') {
-                return ['rds-backup-prod-2017-11-29',
-                        'rds-backup-prod-2017-11-30']
-            }
+  - reactive_choice:
+      name: SNAPSHOT_NAMES
+      description: "Return list of snapshot names."
+      projectName: Test_Job
+      referencedParameters: ENV_NAME
+      script: |
+        if (ENV_NAME == 'production') {
+            return ['rds-backup-prod-2017-11-29',
+                    'rds-backup-prod-2017-11-30']
+        }
     """
 
     def random_with_N_digits(n):
