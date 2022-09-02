@@ -48,7 +48,7 @@ def reactive_choice(parser, xml_parent, data):
         raise MissingAttributeError('projectName')
 
     choiceType = data.get('choiceType')
-    if choiceType is not None and choices_type not in choices_type:
+    if choiceType is not None and choiceType not in choices_type:
         raise MissingAttributeError('Not valid choice')
 
     XML.SubElement(r_p, 'name').text = name
